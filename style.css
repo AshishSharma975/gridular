@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+@font-face {
+    font-family: "gridular";
+    src: url("./gridular/Gridular-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Rmn";
+    src: url("./rm-neue-font-1765438688-0/RMNeue-Regular.woff2") format(woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.textBox{
+    font-size: 5.5vw;
+    line-height: 170%;
+    text-transform: uppercase;
+}
+h1{
+    font-family: "Rmn";
+}
+h1:nth-child(2){
+    padding-left: 2vw;
+}
+span{
+    font-family: "gridular";
+}
+.container{
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+.imgContainer{
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  overflow: hidden;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 9% 100% ,0 89% , 0 11%);
+}
+
+.imgContainer img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display:block;
+}
+
+
+.imgoverlay{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   mix-blend-mode: screen;
+   background-color: rgba(127,48,253,0.12);
+   pointer-events: none; /* <-- critical */
+   z-index: 1;
+}
+
+
+.imgblock{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+
+.imgblock .block{
+  pointer-events: none; 
+  background: rgba(249, 245, 173, 0); 
+  transition: background 200ms linear, transform 200ms linear;
+  will-change: background, transform, opacity;
+  mix-blend-mode: screen; 
+}
+
+
+.imgblock .block.active{
+  /* just in case: */
+  background: rgba(218, 209, 44, 0.5);
+  transform: scale(1.09);
+}
