@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const blockHeight = imgContainerHeight / numRows;
 
     imgblock.style.display = "grid";
-    imgblock.style.gridTemplateColumns = `repeat(${numCols}, 1fr)`; // equal columns
+    imgblock.style.gridTemplateColumns = `repeat(${numCols}, 1fr)`; 
     imgblock.style.gridTemplateRows = `repeat(${numRows}, 1fr)`;
     imgblock.style.width = `${imgContainerWidth}px`;
     imgblock.style.height = `${imgContainerHeight}px`;

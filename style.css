@@ -97,7 +97,6 @@ span{
 
 
 .imgblock .block.active{
-  /* just in case: */
   background: rgba(218, 209, 44, 0.5);
   transform: scale(1.09);
 }
